@@ -8,13 +8,13 @@
 <meta property="og:title" content="Leah McClellan | Product Manager">
 <meta property="og:description" content="I don’t just spec products. I ship them.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://leahmcclellan.design/">
+<meta property="og:url" content="https://www.clubedgemore.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&amp;family=DM+Sans:wght@400;500;700&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap">
 <style>
 /* ===== EDIT HERE: the accent color used for highlights and buttons ===== */
-:root { --accent: #FF6A2B; }
+:root { --accent: #D9480F; }
 /* ======================================================================= */
 html { scroll-behavior: smooth; }
 body { margin: 0; }
@@ -22,6 +22,8 @@ a { color: inherit; }
 a.nav:hover { text-decoration: underline; }
 a.btn:hover { opacity: .88; }
 a:focus-visible, [tabindex]:focus-visible { outline: 3px solid #3D7BFF; outline-offset: 3px; }
+section[id] { scroll-margin-top: 96px; }
+    @media (max-width: 640px) { .site-nav a.nav { display: none; } }
 </style>
 </head>
 <body>
@@ -33,7 +35,8 @@ a:focus-visible, [tabindex]:focus-visible { outline: 3px solid #3D7BFF; outline-
 <div style="background: #F2F3EF; color: #04464B; font-family: 'DM Sans', system-ui, sans-serif; font-size: 18px; line-height: 1.55">
 
 <!-- NAV -->
-<header style="padding: 24px clamp(20px, 4vw, 48px)">
+    <header class="site-nav" style="position: sticky; top: 0; z-index: 50; background: #F2F3EF; border-bottom: 1px solid #D9DCD3; padding: 14px clamp(20px, 4vw, 48px)">
+
 <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
 <a href="#top" style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 22px; text-decoration: none; letter-spacing: -0.01em">Leah McClellan</a>
 <nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; font-size: 16px; font-weight: 500">
@@ -50,9 +53,9 @@ a:focus-visible, [tabindex]:focus-visible { outline: 3px solid #3D7BFF; outline-
 <!-- HERO -->
 <section id="top" style="padding: clamp(40px, 7vw, 96px) clamp(20px, 4vw, 48px) clamp(48px, 6vw, 80px)">
 <div style="max-width: 1200px; margin: 0 auto">
-<div style="font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #4A5058">Senior Product Manager · Atlanta, GA</div>
-<h1 style="margin: 24px 0 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(46px, 9vw, 124px); line-height: 0.96; letter-spacing: -0.03em; max-width: 1100px; color: #12151A">I don’t just spec products. I <span style="color: #FFFFFF; background: var(--accent); padding: 0 0.12em; border-radius: 0.1em">ship</span> them.</h1>
-<p style="margin: 32px 0 0; max-width: 700px; font-size: clamp(18px, 2vw, 22px); color: #12151A">With AI, the distance between a product idea and a working product has collapsed. I now bring fuller concepts to the table and build functional products myself, with the PM fundamentals still deciding what’s worth building: discovery, prioritization, analytics, and measurable outcomes.</p>
+<div style="font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #4A5058">Creative Product Execution · Atlanta, GA</div>
+<h1 style="margin: 24px 0 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(46px, 9vw, 124px); line-height: 0.96; letter-spacing: -0.03em; max-width: 1100px; color: #12151A">I don’t just spec products. <br><br> I <span style="color: #FFFFFF; background: var(--accent); padding: 0 0.12em; border-radius: 0.1em">ship</span> them.</br></h1>
+<p style="margin: 32px 0 0; max-width: 700px; font-size: clamp(18px, 2vw, 22px); color: #12151A">The distance between an idea and a working product has never been shorter. I now bring functional prototypes to the table and build products myself, with the PM fundamentals still deciding what’s worth building: discovery, prioritization, analytics, and measurable outcomes.</p>
 <div style="margin-top: 36px; display: flex; flex-wrap: wrap; gap: 12px; color: #04464b">
 <a class="btn" href="#work" style="text-decoration: none; display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: var(--accent); color: #FFFFFF; font-weight: 700; border-radius: 999px">See what I’ve built</a>
 <a class="btn" href="#scale" style="text-decoration: none; display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border: 2px solid #04464B; font-weight: 700; border-radius: 999px">Results at scale</a>
@@ -86,7 +89,7 @@ a:focus-visible, [tabindex]:focus-visible { outline: 3px solid #3D7BFF; outline-
 <section id="approach" style="padding: clamp(56px, 8vw, 112px) clamp(20px, 4vw, 48px); background: #FFFFFF; border-top: 1px solid #D9DCD3; border-bottom: 1px solid #D9DCD3">
 <div style="max-width: 1200px; margin: 0 auto">
 <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #4A5058">What changed</div>
-<h2 style="margin: 16px 0 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(34px, 5vw, 64px); line-height: 1.02; letter-spacing: -0.025em; max-width: 900px; color: #04464b">AI moved the product manager’s finish line.</h2>
+<h2 style="margin: 16px 0 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(34px, 5vw, 64px); line-height: 1.02; letter-spacing: -0.025em; max-width: 900px; color: #04464b">The finish line moved.</h2>
 <p style="margin: 24px 0 0; max-width: 720px; color: #04464b">A PM used to stop at the document. Now I can carry an idea all the way to something people can open, use, and react to, and still run it like a product.</p>
 <div style="margin-top: 48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px">
 <div style="background: #F2F3EF; border-radius: 20px; padding: 32px">
@@ -97,12 +100,12 @@ a:focus-visible, [tabindex]:focus-visible { outline: 3px solid #3D7BFF; outline-
 <div style="background: #F2F3EF; border-radius: 20px; padding: 32px">
 <div style="width: 44px; height: 8px; background: var(--accent); border-radius: 4px"></div>
 <h3 style="margin: 24px 0 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 26px; line-height: 1.15; color: #04464b">Functional work</h3>
-<p style="margin: 12px 0 0; color: #04464b; font-size: 17px">I build and ship with AI-assisted development, then learn the system well enough to QA it, troubleshoot it, and maintain it. I map the architecture so future updates stay easy.</p>
+<p style="margin: 12px 0 0; color: #04464b; font-size: 17px">I build and ship with AI-assisted development. I know the systems & process well enough to QA it, troubleshoot it, and maintain it. I map the architecture so future updates stay easy.</p>
 </div>
 <div style="background: #F2F3EF; border-radius: 20px; padding: 32px">
 <div style="width: 44px; height: 8px; background: var(--accent); border-radius: 4px"></div>
 <h3 style="margin: 24px 0 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 26px; line-height: 1.15; color: #04464b">Same PM rigor</h3>
-<p style="margin: 12px 0 0; color: #04464b; font-size: 17px">Backlogs, user feedback, analytics, and KPIs still decide what gets built. AI speeds up the building. Judgment decides what’s worth building.</p>
+<p style="margin: 12px 0 0; color: #04464b; font-size: 17px">Backlogs, user feedback, analytics, and KPIs still decide what gets built. AI speeds up the building. Judgment decides what’s worth building. Plus, with my background in marketing, I make things people want to use.</p>
 </div>
 </div>
 </div>
@@ -143,11 +146,11 @@ a:focus-visible, [tabindex]:focus-visible { outline: 3px solid #3D7BFF; outline-
 </div>
 <a class="btn" href="https://saturdayisforcfb.com/" style="align-self: flex-start; text-decoration: none; display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: var(--accent); color: #FFFFFF; font-weight: 700; border-radius: 999px">Open Saturday is for CFB →</a>
 </div>
-<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: center; gap: 32px; width: 699px; height: 1226px">
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: center; gap: 32px">
 <figure style="margin: 0; display: flex; flex-direction: column; align-items: center; gap: 14px">
-<div style="width: 260px; height: 540px; border: 10px solid #0B0D10; border-radius: 44px; background: #0F1116; overflow: hidden; box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35)">
-<div tabindex="0" role="region" aria-label="Scrollable screenshot of the Saturday is for CFB home screen" style="height: 100%; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: none">
-<img src="assets/cfb-home.png" alt="Saturday is for CFB home screen: next-up countdown, Your CFB Week with win chances, Send My Schedule, Current Chaos, Game of the Week, and News for You" style="display: block; width: 100%; height: auto">
+<div style="width: 260px; height: 540px; flex-shrink: 0; border: 10px solid #0B0D10; border-radius: 44px; background: #0F1116; overflow: hidden; box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35)">
+<div tabindex="0" role="region" aria-label="Scrollable screenshot of the Saturday is for CFB home screen" style="height: 540px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: none">
+<img src="assets/cfb-home.png" alt="Saturday is for CFB home screen" style="display: block; width: 100%; height: auto">
 </div>
 </div>
 <figcaption style="font-size: 14px; color: #D5D9DF; text-align: center">Home: Your CFB Week · scroll inside the phone</figcaption>
