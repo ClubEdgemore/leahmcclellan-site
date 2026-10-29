@@ -51,6 +51,18 @@ section[id] { scroll-margin-top: 96px; }
   .site-nav nav a { flex-shrink: 0; white-space: nowrap; }
   section[id] { scroll-margin-top: 110px; }
 }
+
+/* ===== Video players (Saturday is for CFB + Alibi) ===== */
+.cev-frame { position: relative; overflow: hidden; border-radius: 24px; background: #0B0D10; box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35); }
+.cev-frame video { display: block; width: 100%; height: 100%; object-fit: cover; cursor: pointer; }
+.cev-btn { position: absolute; bottom: 12px; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%; background: rgba(11, 13, 16, 0.62); color: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); transition: background .15s; }
+.cev-btn:hover { background: rgba(11, 13, 16, 0.88); }
+.cev-btn:focus-visible { outline: 3px solid #FFFFFF; outline-offset: 2px; }
+.cev-play { left: 12px; }
+.cev-mute { right: 12px; }
+.cev-btn svg { width: 22px; height: 22px; fill: currentColor; display: none; }
+.cev[data-state="paused"] .i-play, .cev[data-state="playing"] .i-pause, .cev[data-state="ended"] .i-replay { display: block; }
+.cev[data-muted="true"] .i-muted, .cev[data-muted="false"] .i-vol { display: block; }
 </style>
 </head>
 
@@ -83,8 +95,8 @@ section[id] { scroll-margin-top: 96px; }
 <div style="max-width: 1200px; margin: 0 auto">
 <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #4A5058">A little studio for big ideas · Atlanta</div>
 <h1 style="margin: 24px 0 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(36px, 9vw, 140px); line-height: 0.96; letter-spacing: -0.03em; color: #04464b">Design. <span style="color: #FFFFFF; background: var(--accent); padding: 0 0.12em; border-radius: 0.1em">Build.</span> Grow.</br></h1>
-<p style="margin: 32px 0 0; font-size: clamp(18px, 2vw, 22px); color: #04464b">From first idea to real users, I create digital products that solve problems, create whimsy, and answer the question, "Wouldn't it be cool if...?"
-<br><br>With a background in product management, design, and marketing, I take ideas from concept to launch and everything in between.</p>
+<p style="margin: 32px 0 0; font-size: clamp(18px, 2vw, 22px); color: #04464b">From first idea to real users, I create digital products that solve problems, create whimsy, & answer the question, "Wouldn't it be cool if...?"
+<br><br>With a background in product management, design, & marketing, I take ideas from concept to launch & everything in between.</p>
 <div style="margin-top: 36px; display: flex; flex-wrap: wrap; gap: 12px; color: #04464b">
 <a class="btn" href="#work" style="text-decoration: none; display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: var(--accent); color: #FFFFFF; font-weight: 700; border-radius: 999px">See what I’ve built</a>
 <a class="btn" href="#scale" style="text-decoration: none; display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border: 2px solid #04464B; font-weight: 700; border-radius: 999px">Results at scale</a>
@@ -119,23 +131,23 @@ section[id] { scroll-margin-top: 96px; }
 <div style="max-width: 1200px; margin: 0 auto">
 <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #4A5058">Concept → Creation</div>
 <h2 style="margin: 16px 0 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(34px, 5vw, 64px); line-height: 1.02; letter-spacing: -0.025em; max-width: 900px; color: #04464b">Ideas don't have to stay ideas.</h2>
-<p style="margin: 24px 0 0; color: #04464b">I spent years turning ideas into digital experiences with big teams. Now, AI-assisted development lets me take those ideas further, building and launching products of my own.  The tools have changed. The fundamentals haven't. Good products still need thoughtful design, smart decisions, real users, and a reason to exist.
+<p style="margin: 24px 0 0; color: #04464b">I spent years turning ideas into digital experiences with big teams. Now, AI-assisted development lets me take those ideas further, building & launching products of my own.  The tools have changed. The fundamentals haven't. Good products still need thoughtful design, smart decisions, real users, & a reason to exist.
 </p>
 <div style="margin-top: 48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px">
 <div style="background: #F2F3EF; border-radius: 20px; padding: 32px">
 <div style="width: 44px; height: 8px; background: var(--accent); border-radius: 4px"></div>
 <h3 style="margin: 24px 0 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 26px; line-height: 1.15; color: #04464b">Fuller concepts</h3>
-<p style="margin: 12px 0 0; color: #04464b; font-size: 17px">Instead of handing off a PRD and a wireframe, I can show a working concept with real data and real interactions, so stakeholders and users react to the product, not a description of it.</p>
+<p style="margin: 12px 0 0; color: #04464b; font-size: 17px">Instead of handing off a PRD & a wireframe, I can show a working concept with real data & real interactions, so stakeholders & users react to the product, not a description.</p>
 </div>
 <div style="background: #F2F3EF; border-radius: 20px; padding: 32px">
 <div style="width: 44px; height: 8px; background: var(--accent); border-radius: 4px"></div>
 <h3 style="margin: 24px 0 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 26px; line-height: 1.15; color: #04464b">Functional work</h3>
-<p style="margin: 12px 0 0; color: #04464b; font-size: 17px">I still own the code. AI helps me ship it faster. I know the systems & processes well enough to QA, troubleshoot, and maintain it. I map the architecture so future updates stay easy.</p>
+<p style="margin: 12px 0 0; color: #04464b; font-size: 17px">I still own the code. AI helps me ship it faster. I know the systems & processes well enough to QA, troubleshoot, & maintain it. I map the architecture so future updates stay easy.</p>
 </div>
 <div style="background: #F2F3EF; border-radius: 20px; padding: 32px">
 <div style="width: 44px; height: 8px; background: var(--accent); border-radius: 4px"></div>
 <h3 style="margin: 24px 0 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 26px; line-height: 1.15; color: #04464b">Same PM rigor</h3>
-<p style="margin: 12px 0 0; color: #04464b; font-size: 17px">Backlogs, user feedback, analytics, and KPIs provide the quantitative data. Judgment decides what’s worth building, & my background in marketing makes sure people know.</p>
+<p style="margin: 12px 0 0; color: #04464b; font-size: 17px">Backlogs, user feedback, analytics, & KPIs provide the quantitative data. Judgment decides what’s worth building, & my background in marketing makes sure people know.</p>
 </div>
 </div>
 </div>
@@ -148,9 +160,9 @@ section[id] { scroll-margin-top: 96px; }
 <section id="work" style="padding: clamp(56px, 8vw, 112px) clamp(20px, 4vw, 48px); color: #F2F3EF; background-color: #04464B">
 <div style="max-width: 1200px; margin: 0 auto">
 <h2 style="margin: 16px 0 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(44px, 8vw, 104px); line-height: 0.98; letter-spacing: -0.03em">Welcome to Club Edgemore</h2>
-<p style="margin: 24px 0 0;  font-size: clamp(18px, 2vw, 22px); color: #D5D9DF">A little product studio for big ideas, useful tools, and things that are just plain fun.
+<p style="margin: 24px 0 0;  font-size: clamp(18px, 2vw, 22px); color: #D5D9DF">A little product studio for big ideas, useful tools, & things that are just plain fun.
 
-<br><br>Club Edgemore, LLC is my home & the home for independently designed, built, and launched digital products. I handle the product strategy, UX, development, marketing, and everything in between.</br></p>
+<br><br>Club Edgemore, LLC is my home & the home for independently designed, built, & launched digital products. I handle the product strategy, UX, development, marketing, & everything in between.</br></p>
    <div style="margin-top: 36px; display: flex; flex-wrap: wrap; gap: 12px; color: #04464b">
        <a class="btn" href="https://clubedgemore.github.io/Karaoke/" style="text-decoration: none; display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: var(--accent); color: #FFFFFF; font-weight: 700; border-radius: 999px">Wanna do karaoke?</a>
        <a class="btn" href="https://clubedgemore.github.io/Karaoke/" style="text-decoration: none; display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: var(--accent); color: #FFFFFF; font-weight: 700; border-radius: 999px">How about bingo?</a>
@@ -164,7 +176,7 @@ section[id] { scroll-margin-top: 96px; }
 <div style="margin-top: 72px; padding-top: 32px; border-top: 2px solid #F2F3EF">
 <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: clamp(16px, 4.5vw, 28px); letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">Product 01 · Mobile-first app</div>
 <h3 style="margin: 12px 0 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(34px, 5vw, 64px); line-height: 1; letter-spacing: -0.025em">Saturday is for CFB</h3>
-<p style="margin: 16px 0 0; max-width: 700px; color: #D5D9DF">Your teams. Your schedule. Your entire college football weekend in one place.</p>
+<p style="margin: 16px 0 0; max-width: 700px; color: #D5D9DF">Your teams. Your schedule. Your Saturday Sorted.</p>
    <div style="margin-top: 36px; display: flex; flex-wrap: wrap; gap: 12px; color: #04464b">
        <a class="btn" href="https://saturdayisforcfb.com/" style="align-self: flex-start; text-decoration: none; display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; background: var(--accent); color: #FFFFFF; font-weight: 700; border-radius: 999px">Saturday is for CFB →</a>
        </div>
@@ -173,29 +185,37 @@ section[id] { scroll-margin-top: 96px; }
 <div style="border-top: 1px solid #3A3F47; padding-top: 20px">
 <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">What shipped</div>
 <p style="margin: 10px 0 0; color: #D5D9DF">
-    Live scores, schedules, news, TV information, handwritten predictions, and team data, brought together in a personalized “Your CFB Week” experience. I iterated the information architecture and UX on what I saw people needing and what they told me.</p>
+    Native-app architecture with live scores, schedules, news, TV information, handwritten predictions, & team data, brought together in a personalized “Your CFB Week” experience.</p>
 </div>
 <div style="border-top: 1px solid #3A3F47; padding-top: 20px">
 <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">Built around real fans</div>
-<p style="margin: 10px 0 0; color: #D5D9DF">What started as a way to follow my own teams has grown into a personalized college football companion. Real user feedback drives the roadmap, from team-specific notifications and live game tracking to schedule conflict alerts. I track adoption, engagement, and feature usage to decide what comes next.</div>
+<p style="margin: 10px 0 0; color: #D5D9DF">What started as me-specific schedule has grown into a personalized CFB companion. Analytics & feedback drive the roadmap. I track KPIs to decide what comes next.</div>
 <div style="border-top: 1px solid #3A3F47; padding-top: 20px">
 <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">0-to-1 launch</div>
-<p style="margin: 10px 0 0; color: #D5D9DF">About 1,000 users found it organically in the first week. I wrote the initial backlog, then used early-user feedback and surveys to prioritize features and refine the roadmap.</p>
+<p style="margin: 10px 0 0; color: #D5D9DF">About 1,000 users found it organically in the first week. I wrote the initial backlog, then used early-user feedback & surveys to prioritize features + refine the roadmap.</p>
 </div>
 <div style="border-top: 1px solid #3A3F47; padding-top: 20px">
 <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">Data-informed</div>
-<p style="margin: 10px 0 0; color: #D5D9DF">Product analytics show which teams people follow and how many they add. That behavior informs product decisions and points to monetization opportunities.</p>
+<p style="margin: 10px 0 0; color: #D5D9DF">Product analytics show which teams people follow & how many they add. That behavior informs product decisions & points to monetization opportunities.</p>
 </div>
 
 </div>
 <div style="flex: 1 1 440px; min-width: 0; display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: center; gap: 32px">
-<figure style="margin: 0; display: flex; flex-direction: column; align-items: center; gap: 14px">
-<div style="width: 260px; height: 540px; flex-shrink: 0; border: 10px solid #0B0D10; border-radius: 44px; background: #0F1116; overflow: hidden; box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35)">
-<div tabindex="0" role="region" aria-label="Scrollable screenshot of the Saturday is for CFB home screen" style="height: 540px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: none">
-<img src="assets/cfb-home.png" alt="Saturday is for CFB home screen" style="display: block; width: 100%; height: auto">
+<figure class="cev" data-state="paused" data-muted="true" style="margin: 0; width: 100%; max-width: 320px">
+<div class="cev-frame" style="aspect-ratio: 9 / 16">
+<video muted playsinline preload="metadata" poster="assets/cfb-demo-poster.jpg" aria-label="Video: Saturday is for CFB shows three games at once in one feed" disablepictureinpicture>
+<source src="assets/cfb-demo.mp4" type="video/mp4">
+</video>
+<button type="button" class="cev-btn cev-play" aria-label="Play video">
+<svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+<svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+<svg class="i-replay" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5V2L7 6l5 4V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7z"/></svg>
+</button>
+<button type="button" class="cev-btn cev-mute" aria-label="Unmute video">
+<svg class="i-vol" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>
+<svg class="i-muted" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3z"/><path d="M16 9.5l5 5M21 9.5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+</button>
 </div>
-</div>
-<figcaption style="font-size: 14px; color: #D5D9DF; text-align: center">Home: Your CFB Week · scroll inside the phone</figcaption>
 </figure>
 </div>
 </div>
@@ -213,23 +233,36 @@ section[id] { scroll-margin-top: 96px; }
         </div>
 </div>
 <div style="flex: 0 1 400px; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 20px">
-<div style="width: 100%; max-width: 460px; box-sizing: border-box; background: #F2F3EF; border-radius: 28px; padding: 32px; display: flex; align-items: center; justify-content: center">
-<img src="assets/alibi-logo.png" alt="Alibi Murder Mysteries logo: a detective in a fedora above the word Alibi, with a red masquerade mask below" style="display: block; width: 100%; max-width: 360px; height: auto">
+<figure class="cev" data-state="paused" data-muted="true" style="margin: 0; width: 100%; max-width: 420px">
+<div class="cev-frame" style="aspect-ratio: 1 / 1">
+<video muted playsinline preload="metadata" poster="assets/alibi-explainer-poster.jpg" aria-label="Video: how Alibi Murder Mysteries works" disablepictureinpicture>
+<source src="assets/alibi-explainer.mp4" type="video/mp4">
+</video>
+<button type="button" class="cev-btn cev-play" aria-label="Play video">
+<svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+<svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+<svg class="i-replay" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5V2L7 6l5 4V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7z"/></svg>
+</button>
+<button type="button" class="cev-btn cev-mute" aria-label="Unmute video">
+<svg class="i-vol" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>
+<svg class="i-muted" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3z"/><path d="M16 9.5l5 5M21 9.5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+</button>
 </div>
+</figure>
 </div>
 </div>
 <div style="margin-top: 56px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px">
 <div style="border-top: 1px solid #3A3F47; padding-top: 20px">
 <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">The experience</div>
-<p style="margin: 10px 0 0; color: #D5D9DF">A host picks a mystery, sends guests their character, and runs the whole night from their phone. Shopping lists, ideas, props, printables & stories set the stage & people can do as little or as much as they want.</p>
+<p style="margin: 10px 0 0; color: #D5D9DF">A host picks a mystery, sends guests their character, & runs the whole night from their phone. Shopping lists, ideas, props, printables & stories set the stage & people can do as little or as much as they want.</p>
 </div>
 <div style="border-top: 1px solid #3A3F47; padding-top: 20px">
 <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">A real catalog</div>
-<p style="margin: 10px 0 0; color: #D5D9DF">One free mystery to start, then paid mysteries from $14.99 to $29.99 across easy and medium difficulty. Each lists its suspect count and run time so hosts can match a mystery to their party.</p>
+<p style="margin: 10px 0 0; color: #D5D9DF">One free mystery to start, then paid mysteries from $14.99 to $29.99 across varying difficulty. Each lists its suspect count & run time so hosts can match a mystery to their party.</p>
 </div>
 <div style="border-top: 1px solid #3A3F47; padding-top: 20px">
 <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent)">Built for growth</div>
-<p style="margin: 10px 0 0; color: #D5D9DF">The free mystery leads into account signup. I've always written and hosted murder mystery parties, but there's a barrier to entry because everything is manual. I wanted more people to have more fun, so I built it.</p>
+<p style="margin: 10px 0 0; color: #D5D9DF">The free mystery leads into account signup. I've written & hosted murder mystery parties, but there's a barrier to entry because everything is manual & rigid. I wanted more flexibility & fun, so I built it.</p>
 </div>
 </div>
 </div>
@@ -238,12 +271,12 @@ section[id] { scroll-margin-top: 96px; }
 <div style="max-width: 1200px; margin: 0 auto">
 <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #4A5058">Product at scale · The Home Depot · 2014–Present</div>
 <h2 style="margin: 16px 0 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(34px, 5vw, 64px); line-height: 1.02; letter-spacing: -0.025em; color: #04464b">Twelve years of owning product where millions of customers shop.</h2>
-<p style="margin: 24px 0 0; color: #04464B">From designing 200+ homepage experiences a year to owning the roadmap and backlog for creative solutions. I lead discovery, research, experimentation, and prototype validation across desktop, mobile web, and the iOS and Android apps, partnering with Engineering, UX, Creative, and Senior Leaders.</p>
+<p style="margin: 24px 0 0; color: #04464B">From designing 200+ homepage experiences a year to owning the roadmap & backlog for creative solutions. I lead discovery, research, experimentation, & prototype validation across desktop, mobile web, & the iOS/Android apps, partnering with Engineering, UX, Creative, & Senior Leaders.</p>
 <div style="margin-top: 48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px">
 <div style="background: #F2F3EF; border-radius: 20px; padding: 32px">
 <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 64px; line-height: 1; letter-spacing: -0.03em; color: #04464b">400%</div>
 <div style="margin-top: 8px; font-weight: 700">Increase in hero clickthrough</div>
-<p style="margin: 12px 0 0; color: #4A5058; font-size: 16px">From a bento-hero concept tested in October 2024, I led the research, concept, design, and build.</p>
+<p style="margin: 12px 0 0; color: #4A5058; font-size: 16px">From a bento-hero concept tested in October 2024, I led the research, concept, design, & build.</p>
 </div>
 <div style="background: #F2F3EF; border-radius: 20px; padding: 32px">
 <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 64px; line-height: 1; letter-spacing: -0.03em; color: #04464b">667%</div>
@@ -253,12 +286,12 @@ section[id] { scroll-margin-top: 96px; }
 <div style="background: #F2F3EF; border-radius: 20px; padding: 32px">
 <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 64px; line-height: 1; letter-spacing: -0.03em; color: #04464b">33%</div>
 <div style="margin-top: 8px; font-weight: 700">Less build time<br>~$500K saved a year</div>
-<p style="margin: 12px 0 0; color: #4A5058; font-size: 16px">Redesigned process & workflows in the campaign to create parity between app and mobile web.</p>
+<p style="margin: 12px 0 0; color: #4A5058; font-size: 16px">Redesigned process & workflows in the campaign to create parity between app & mobile web.</p>
 </div>
 <div style="background: #F2F3EF; border-radius: 20px; padding: 32px">
 <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 64px; line-height: 1; letter-spacing: -0.03em; color: #04464b">0 → 5</div>
 <div style="margin-top: 8px; font-weight: 700">Online Creative Product team from scratch</div>
-<p style="margin: 12px 0 0; color: #4A5058; font-size: 16px">Created OCPS from the ground up: processes, trainings, and OKRs, growing from 1 → 5 SMEs.</p>
+<p style="margin: 12px 0 0; color: #4A5058; font-size: 16px">Created OCPS from the ground up: processes, trainings, & OKRs, growing from 1 → 5 SMEs.</p>
 </div>
 </div>
 </div>
@@ -273,7 +306,7 @@ section[id] { scroll-margin-top: 96px; }
 <div style="background: #FFFFFF; border: 1px solid #D9DCD3; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
 <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #4A5058">Homepage · 6 months</div>
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 28px; line-height: 1.12; color: #04464b">Epic: Homepage Holiday Improvements</h3>
-<p style="margin: 0; color: #04464b; font-size: 16px">Led research, concept, design, and build of a new homepage with Engineering, UX, design, & Product, introducing three new products. It went from a bento hero, to image mapping for full flexibility, to holiday theming. Concerns about data capture and launch stability shaped each round.</p>
+<p style="margin: 0; color: #04464b; font-size: 16px">Led research, concept, design, & build of a new homepage with Engineering, UX, design, & Product, introducing three new products. It went from a bento hero, to image mapping for full flexibility, to holiday theming. Concerns about data capture & launch stability shaped each round.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 8px">
 <span style="color: #FFFFFF; padding: 6px 12px; background: var(--accent); border-radius: 999px; font-weight: 700; font-size: 14px">+400% hero CTR</span>
 <span style="color: #FFFFFF; padding: 6px 12px; background: var(--accent); border-radius: 999px; font-weight: 700; font-size: 14px">+667% sales</span>
@@ -282,8 +315,8 @@ section[id] { scroll-margin-top: 96px; }
 </div>
 <div style="background: #FFFFFF; border: 1px solid #D9DCD3; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
 <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #4A5058">Platform feature · World Cup 2026</div>
-<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 28px; line-height: 1.12; color: #04464b">Home Depot + FIFA: The Customer Experience</h3>
-<p style="margin: 0; color: #04464b; font-size: 16px">I pitched ideas for in-store workshops, website enhancements, commercials, and signage. My team shipped a hotspot feature that lets creatives map an image with links, so they could build bespoke experiences for soccer fans. The goal was excitement and loyalty, not just metrics.</p>
+<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 28px; line-height: 1.12; color: #04464b">Home Depot + FIFA: The Experience</h3>
+<p style="margin: 0; color: #04464b; font-size: 16px">I pitched ideas for in-store workshops, website enhancements, commercials, & signage. My team shipped a hotspot feature that lets creatives map an image with links, so they could build bespoke experiences for soccer fans. The goal was excitement & loyalty, not just metrics.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 8px">
 <span style="color: #FFFFFF; padding: 6px 12px; background: var(--accent); border-radius: 999px; font-weight: 700; font-size: 14px">Shipped: image hotspot feature</span>
 </div>
@@ -292,7 +325,7 @@ section[id] { scroll-margin-top: 96px; }
 <div style="background: #FFFFFF; border: 1px solid #D9DCD3; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
 <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #4A5058">Internal tools · Since Nov 2023</div>
 <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 28px; line-height: 1.12; color: #04464b">Online Creative Product Support</h3>
-<p style="margin: 0; color: #04464b; font-size: 16px">I built the team from the ground up to five people who troubleshoot, solve problems, and write feature requests for 100+ users. I started a public release-demo page and a weekly “In Case You Missed It” email, and I lead blameless post-mortems that feed back into the product.</p>
+<p style="margin: 0; color: #04464b; font-size: 16px">I built the team from the ground up to five people who troubleshoot, solve problems, & write feature requests for 100+ users. I started a public release-demo page & a weekly “In Case You Missed It” email, & I lead blameless post-mortems that feed back into the product.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 8px">
 <span style="color: #FFFFFF; padding: 6px 12px; background: var(--accent); border-radius: 999px; font-weight: 700; font-size: 14px">0 → 5 team</span>
 <span style="color: #FFFFFF; padding: 6px 12px; background: var(--accent); border-radius: 999px; font-weight: 700; font-size: 14px">100+ internal users</span>
@@ -312,22 +345,22 @@ section[id] { scroll-margin-top: 96px; }
 <div style="border-top: 2px solid #04464B; padding-top: 20px">
 <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.08em; color: #4A5058">01</div>
 <h3 style="margin: 8px 0 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 26px">Discover</h3>
-<p style="margin: 12px 0 0; color: #04464B; font-size: 16px">User interviews, DScout studies, and behavioral data. ChatGPT, Claude, Gemini, and NotebookLM help me synthesize insights and weigh alternatives faster.</p>
+<p style="margin: 12px 0 0; color: #04464B; font-size: 16px">User interviews, DScout studies, & behavioral data. ChatGPT, Claude, Gemini, & NotebookLM help me synthesize insights faster.</p>
 </div>
 <div style="border-top: 2px solid #04464B; padding-top: 20px">
 <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.08em; color: #4A5058">02</div>
 <h3 style="margin: 8px 0 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 26px">Define</h3>
-<p style="margin: 12px 0 0; color: #04464B; font-size: 16px">MoSCoW, level of effort, and quick wins turn a data-driven backlog into a roadmap. PRDs and user stories make the scope clear.</p>
+<p style="margin: 12px 0 0; color: #04464B; font-size: 16px">MoSCoW, level of effort, & quick wins turn a data-driven backlog into a roadmap. PRDs & user stories make the scope clear.</p>
 </div>
 <div style="border-top: 2px solid #04464B; padding-top: 20px">
 <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.08em; color: #4A5058">03</div>
 <h3 style="margin: 8px 0 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 26px">Build &amp; deliver</h3>
-<p style="margin: 12px 0 0; color: #04464B; font-size: 16px">Scrum sprint planning against team capacity and product goals. And when a working product beats a description, I build it myself.</p>
+<p style="margin: 12px 0 0; color: #04464B; font-size: 16px">Scrum sprint planning against team capacity & product goals. When a working product beats a description, I build it myself.</p>
 </div>
 <div style="border-top: 2px solid #04464B; padding-top: 20px">
 <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.08em; color: #4A5058">04</div>
 <h3 style="margin: 8px 0 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 26px">Measure</h3>
-<p style="margin: 12px 0 0; color: #04464B; font-size: 16px">Tableau, Adobe Analytics, and A/B tests track CRO, CTR, and impressions. Every launch gets measured against its KPIs.</p>
+<p style="margin: 12px 0 0; color: #04464B; font-size: 16px">Tableau, Adobe Analytics, & A/B tests track CRO, CTR, & impressions. Every launch gets measured against its KPIs.</p>
 </div>
 </div>
 </div>
@@ -384,7 +417,7 @@ section[id] { scroll-margin-top: 96px; }
 <section style="padding: clamp(48px, 6vw, 80px) clamp(20px, 4vw, 48px)">
 <div style="max-width: 1200px; margin: 0 auto">
 <div style="font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #4A5058">Design roots</div>
-<p style="margin: 16px 0 0; max-width: 720px; color: #04464B">I started at The Home Depot in 2014 designing and building pages, infographics, and app experiences. The earlier work is still online.</p>
+<p style="margin: 16px 0 0; max-width: 720px; color: #04464B">I started at The Home Depot in 2014 designing & building pages, infographics, & app experiences. The earlier work is still online.</p>
 <div style="margin-top: 24px; display: flex; flex-wrap: wrap; gap: 12px">
 <a href="https://leahmcclellan.design/home-depot-full-pages/" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border: 2px solid #04464B; border-radius: 999px; font-weight: 700; text-decoration: none">homedepot.com pages</a>
 <a href="https://leahmcclellan.design/buildcheer-at-the-home-depot-2017/" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border: 2px solid #04464B; border-radius: 999px; font-weight: 700; text-decoration: none">#BuildCheer 2017 app</a>
@@ -409,5 +442,60 @@ section[id] { scroll-margin-top: 96px; }
 </footer>
 
 </div>
+<script>
+/* Video players: autoplay (muted) when scrolled into view, pause when scrolled away.
+   Controls: play / pause / replay, and mute / unmute. */
+(function () {
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var players = document.querySelectorAll('.cev');
+  players.forEach(function (fig) {
+    var v = fig.querySelector('video');
+    var playBtn = fig.querySelector('.cev-play');
+    var muteBtn = fig.querySelector('.cev-mute');
+    var userPaused = false, ended = false;
+
+    function sync() {
+      var state = ended ? 'ended' : (v.paused ? 'paused' : 'playing');
+      fig.setAttribute('data-state', state);
+      fig.setAttribute('data-muted', v.muted ? 'true' : 'false');
+      playBtn.setAttribute('aria-label', state === 'ended' ? 'Replay video' : (state === 'paused' ? 'Play video' : 'Pause video'));
+      muteBtn.setAttribute('aria-label', v.muted ? 'Unmute video' : 'Mute video');
+    }
+    function tryPlay() {
+      var p = v.play();
+      if (p && p.catch) { p.catch(function () { sync(); }); }
+    }
+    function togglePlay() {
+      if (ended) { ended = false; userPaused = false; v.currentTime = 0; tryPlay(); }
+      else if (v.paused) { userPaused = false; tryPlay(); }
+      else { userPaused = true; v.pause(); }
+      sync();
+    }
+
+    ['play', 'playing', 'pause', 'volumechange'].forEach(function (ev) { v.addEventListener(ev, sync); });
+    v.addEventListener('ended', function () { ended = true; sync(); });
+    playBtn.addEventListener('click', togglePlay);
+    v.addEventListener('click', togglePlay);
+    muteBtn.addEventListener('click', function () {
+      v.muted = !v.muted;
+      if (!v.muted) { players.forEach(function (other) { var ov = other.querySelector('video'); if (ov !== v) ov.muted = true; }); }
+      sync();
+    });
+
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.intersectionRatio >= 0.6) {
+            if (!userPaused && !ended && !reduceMotion) { tryPlay(); }
+          } else if (e.intersectionRatio < 0.25 && !v.paused) {
+            v.pause();
+          }
+        });
+      }, { threshold: [0, 0.25, 0.6] }).observe(fig);
+    }
+    sync();
+  });
+})();
+</script>
 </body>
 </html>
